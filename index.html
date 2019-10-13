@@ -1,61 +1,188 @@
 ﻿<!DOCTYPE html>
 <html>
-<head>
-<meta charset="utf-8"/>
-<title>practice</title>
-<style type="text/css">
-.m-demo{position:absolute;top:50%;left:50%;width:400px;height:400px;margin:-200px;perspective:1000px;cursor:default;}
-.m-demo .box{position:absolute;width:100%;height:100%;transform-style:preserve-3d;-webkit-animation:rotate 5s 15s linear infinite both;}
-.m-demo .box>div{position:absolute;width:100%;height:100%;box-sizing:border-box;border:2px solid rgba(0,0,0,0);background:rgba(0,0,0,0);border-color:rgba(0,0,0,0.8);transition:1s linear;text-align:center;line-height:400px;font-size:50px;}
-.m-demo .box .top{-webkit-animation:top 2s 2s linear both;-webkit-transform:translateZ(-200px);}
-.m-demo .box .bottom{-webkit-animation:bottom 2s 4s linear both;-webkit-transform:translateZ(-200px);}
-.m-demo .box .left{-webkit-animation:left 2s 6s linear both;-webkit-transform:translateZ(-200px);}
-.m-demo .box .right{-webkit-animation:right 2s 8s linear both;-webkit-transform:translateZ(-200px);}
-.m-demo .box .back{-webkit-animation:back 2s 10s linear both;-webkit-transform:translateZ(-200px);}
-.m-demo .box .front{-webkit-animation:front 2s 12s linear both;-webkit-transform:translateZ(-200px);}
-.m-demo:hover .box>div{border-color:rgba(0,0,0,0);color:#fff;}
-.m-demo:hover .box .top{background:url(my.gif); background-repeat: no-repeat; background-position: center; background-size: 410px;}
-.m-demo:hover .box .bottom{background:url(my.gif); background-repeat: no-repeat; background-position: center; background-size: 410px;}
-.m-demo:hover .box .left{background:url(my.gif); background-repeat: no-repeat; background-position: center; background-size: 410px;}
-.m-demo:hover .box .right{background:url(my.gif); background-repeat: no-repeat; background-position: center; background-size: 410px;}
-.m-demo:hover .box .front{background:url(my.gif); background-repeat: no-repeat; background-position: center; background-size: 410px;}
-.m-demo:hover .box .back{background:url(my.gif); background-repeat: no-repeat; background-position: center; background-size: 410px;}
-@-webkit-keyframes rotate{
-    100%{-webkit-transform:rotate3d(1,1,1,360deg);}
-}
-@-webkit-keyframes top{
-    100%{-webkit-transform:rotateX(-90deg) translateY(200px); -webkit-transform-origin: 50% 100%;}
-}
-@-webkit-keyframes bottom{
-    100%{-webkit-transform:rotateX(90deg) translateY(-200px); -webkit-transform-origin: 50% 0%;}
-}
-@-webkit-keyframes left{
-    100%{-webkit-transform:rotateY(-90deg) translateX(-200px); -webkit-transform-origin: 0% 50%;}
-}
-@-webkit-keyframes right{
-    100%{-webkit-transform:rotateY(90deg) translateX(200px); -webkit-transform-origin: 100% 50%;}
-}
-@-webkit-keyframes front{
-    100%{-webkit-transform:translateZ(200px)}
-}
-@-webkit-keyframes back{
-    100%{}
-}
-</style>
-</head>
-<body>
-<div class="m-demo">
-    <div class="box">
-        <div class="top"></div>
-        <div class="bottom"></div>
-        <div class="left"></div>
-        <div class="right"></div>
-        <div class="front"></div>
-        <div class="back"></div>
-    </div>
-</div>
 
-<input type="date" value="1996-09-17">
+<head>
+    <meta charset="utf-8" />
+    <title>practice</title>
+    <style type="text/css">
+        .m-demo {
+            position: absolute;
+            top: 50%;
+            left: 50%;
+            width: 400px;
+            height: 400px;
+            margin: -200px;
+            perspective: 1000px;
+            cursor: default;
+        }
+
+        .m-demo .box {
+            position: absolute;
+            width: 100%;
+            height: 100%;
+            transform-style: preserve-3d;
+            -webkit-animation: rotate 5s 15s linear infinite both;
+        }
+
+        .m-demo .box>div {
+            position: absolute;
+            width: 100%;
+            height: 100%;
+            box-sizing: border-box;
+            border: 2px solid rgba(0, 0, 0, 0);
+            background: rgba(0, 0, 0, 0);
+            border-color: rgba(0, 0, 0, 0.8);
+            transition: 1s linear;
+            text-align: center;
+            line-height: 400px;
+            font-size: 50px;
+        }
+
+        .m-demo .box .top {
+            -webkit-animation: top 2s 2s linear both;
+            -webkit-transform: translateZ(-200px);
+        }
+
+        .m-demo .box .bottom {
+            -webkit-animation: bottom 2s 4s linear both;
+            -webkit-transform: translateZ(-200px);
+        }
+
+        .m-demo .box .left {
+            -webkit-animation: left 2s 6s linear both;
+            -webkit-transform: translateZ(-200px);
+        }
+
+        .m-demo .box .right {
+            -webkit-animation: right 2s 8s linear both;
+            -webkit-transform: translateZ(-200px);
+        }
+
+        .m-demo .box .back {
+            -webkit-animation: back 2s 10s linear both;
+            -webkit-transform: translateZ(-200px);
+        }
+
+        .m-demo .box .front {
+            -webkit-animation: front 2s 12s linear both;
+            -webkit-transform: translateZ(-200px);
+        }
+
+        .m-demo:hover .box>div {
+            border-color: rgba(0, 0, 0, 0);
+            color: #fff;
+        }
+
+        .m-demo:hover .box .top {
+            background: url(my.gif);
+            background-repeat: no-repeat;
+            background-position: center;
+            background-size: 410px;
+        }
+
+        .m-demo:hover .box .bottom {
+            background: url(my.gif);
+            background-repeat: no-repeat;
+            background-position: center;
+            background-size: 410px;
+        }
+
+        .m-demo:hover .box .left {
+            background: url(my.gif);
+            background-repeat: no-repeat;
+            background-position: center;
+            background-size: 410px;
+        }
+
+        .m-demo:hover .box .right {
+            background: url(my.gif);
+            background-repeat: no-repeat;
+            background-position: center;
+            background-size: 410px;
+        }
+
+        .m-demo:hover .box .front {
+            background: url(my.gif);
+            background-repeat: no-repeat;
+            background-position: center;
+            background-size: 410px;
+        }
+
+        .m-demo:hover .box .back {
+            background: url(my.gif);
+            background-repeat: no-repeat;
+            background-position: center;
+            background-size: 410px;
+        }
+
+        @-webkit-keyframes rotate {
+            100% {
+                -webkit-transform: rotate3d(1, 1, 1, 360deg);
+            }
+        }
+
+        @-webkit-keyframes top {
+            100% {
+                -webkit-transform: rotateX(-90deg) translateY(200px);
+                -webkit-transform-origin: 50% 100%;
+            }
+        }
+
+        @-webkit-keyframes bottom {
+            100% {
+                -webkit-transform: rotateX(90deg) translateY(-200px);
+                -webkit-transform-origin: 50% 0%;
+            }
+        }
+
+        @-webkit-keyframes left {
+            100% {
+                -webkit-transform: rotateY(-90deg) translateX(-200px);
+                -webkit-transform-origin: 0% 50%;
+            }
+        }
+
+        @-webkit-keyframes right {
+            100% {
+                -webkit-transform: rotateY(90deg) translateX(200px);
+                -webkit-transform-origin: 100% 50%;
+            }
+        }
+
+        @-webkit-keyframes front {
+            100% {
+                -webkit-transform: translateZ(200px)
+            }
+        }
+
+        @-webkit-keyframes back {
+            100% {}
+        }
+    </style>
+</head>
+
+<body>
+    <div class="m-demo">
+        <div class="box">
+            <div class="top"></div>
+            <div class="bottom"></div>
+            <div class="left"></div>
+            <div class="right"></div>
+            <div class="front"></div>
+            <div class="back"></div>
+        </div>
+    </div>
+
+    <input type="date" value="1996-09-17" style="    border: 0;
+outline: 0;
+width: 95%;
+font-weight: 500;
+margin-left: 0.5rem;
+height: 1.5rem;
+font-family: inherit;
+font-size: inherit;
+color: #333;">
 
 </body>
+
 </html>
