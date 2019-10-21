@@ -158,6 +158,14 @@
         @-webkit-keyframes back {
             100% {}
         }
+
+        p {
+            height: 100px;
+        }
+
+        #live2dcanvas {
+            border: 0 !important;
+        }
     </style>
 </head>
 
@@ -173,15 +181,22 @@
         </div>
     </div>
 
-    <input type="date" value="1996-09-17" style="    border: 0;
-outline: 0;
-width: 95%;
-font-weight: 500;
-margin-left: 0.5rem;
-height: 1.5rem;
-font-family: inherit;
-font-size: inherit;
-color: #333;">
+    <script type="text/javascript" charset="utf-8" src="https://files.cnblogs.com/files/liuzhou1/L2Dwidget.0.min.js">
+    </script>
+    <script type="text/javascript" charset="utf-8" src="https://files.cnblogs.com/files/liuzhou1/L2Dwidget.min.js">
+    </script>
+    <script type="text/javascript">
+        L2Dwidget.init({
+            "display": {
+                "superSample": 2,
+                "width": 200,
+                "height": 400,
+                "position": "right",
+                "hOffset": 0,
+                "vOffset": 0
+            }
+        });
+    </script>
 
 </body>
 
